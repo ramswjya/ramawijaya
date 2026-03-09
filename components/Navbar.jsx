@@ -20,8 +20,25 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [menuOpen]);
+
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+    <nav className={`${styles.nav} ${scrolled && !menuOpen ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.logo}>
           {profile.shortName}<span className={styles.dot}>.</span>
