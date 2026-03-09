@@ -11,7 +11,7 @@ export const profile = {
     "Turning manual workflows into automated, data-driven systems using Google Sheets, AppSheet, and modern web tools.",
 
   about: [
-    "Warehouse administration and operations professional with 4+ years of experience in administration, operations, and digital reporting, currently pursuing a Management degree through an evening program.",
+    "Warehouse administration and operations professional with 5+ years of experience in administration, operations, and digital reporting, currently pursuing a Management degree through an evening program.",
     "Passionate about learning new technologies and eager to explore app development, creative problem solving, and digital innovation.",
   ],
 
